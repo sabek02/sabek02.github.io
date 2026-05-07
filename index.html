@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>WaterLand - Water Park Website Template</title>
+        <title>AGS Voyage - Agence de voyage et tourisme</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="" name="keywords">
         <meta content="" name="description">
@@ -28,14 +28,43 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+        <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".nav-bar");
+
+            if (window.scrollY > 80) {
+                navbar.classList.add("navbar-scrolled");
+            } else {
+                navbar.classList.remove("navbar-scrolled");
+            }
+        });
+        </script>
     </head>
 
     <body>
 
         <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
+        <div id="spinner" class="spinner-wrapper show">
+            <div class="spinner-content text-center">
+        
+                <!-- Logo -->
+                <img src="/img/ags voyage logo.png" alt="AGS Voyage" class="spinner-logo">
+        
+                <!-- Globe + Avion -->
+                <div class="globe-wrapper">
+                    <div class="globe"></div>
+                    <div class="plane-orbit">
+                        <i class="fas fa-plane plane-icon"></i>
+                    </div>
+                </div>
+        
+                <!-- Texte -->
+                <p class="spinner-text mt-3">Préparation de votre voyage...</p>
+        
             </div>
         </div>
         <!-- Spinner End -->
@@ -43,19 +72,19 @@
         <!-- Navbar & Hero Start -->
         <div class="container-fluid nav-bar sticky-top px-4 py-2 py-lg-0">
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a href="" class="navbar-brand p-0">
-                    <h1 class="display-6 text-dark"><i class="fas fa-swimmer text-primary me-3"></i>WaterLand</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                <a href="index.html" class="navbar-brand p-0">
+                    <!--<h1 class="display-6 text-dark"><i class="fas fa-swimmer text-primary me-3"></i>WaterLand</h1>-->
+                    <img src="img/ags voyage logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav mx-auto py-0">
-                        <a href="index.html" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="index.html" class="nav-item nav-link active">Accueil</a>
+                        <a href="about.html" class="nav-item nav-link">À propos</a>
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Service</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                             <div class="dropdown-menu m-0">
                                 <a href="service.html" class="dropdown-item">Services</a>
                                 <a href="service-detail.html" class="dropdown-item">Service Details</a>
@@ -72,11 +101,11 @@
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
                                 <a href="feature.html" class="dropdown-item">Our Feature</a>
-                                <a href="gallery.html" class="dropdown-item">Our Gallery</a>
+                                <a href="gallery.html" class="dropdown-item">Gallerie</a>
                                 <a href="attraction.html" class="dropdown-item">Attractions</a>
                                 <a href="package.html" class="dropdown-item">Ticket Packages</a>
                                 <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                <a href="testimonial.html" class="dropdown-item">Témoignage</a>
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div>
@@ -93,125 +122,190 @@
             </nav>
         </div>
         <!-- Navbar & Hero End -->
-
+        
         <!-- Carousel Start -->
-        <div class="header-carousel owl-carousel">
-            <div class="header-carousel-item">
-                <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="container align-items-center py-4">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
-                                <div class="text-start">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To WaterLand</h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">The Biggest Theme & Amusement Park</h1>
-                                    <p class="mb-4 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
-                                    </p>
-                                    <div class="d-flex flex-shrink-0">
-                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
+        <div class="position-relative">
+            <!-- SLIDER -->
+            <div class="header-carousel owl-carousel">
+
+                <div class="header-carousel-item">
+                    <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Tourisme">
+                    <div class="carousel-caption">
+                        <div class="container align-items-center py-4">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s">
+                                    <div class="text-start">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">
+                                            Découvrez le monde
+                                        </h4>
+                                        <h1 class="display-4 text-uppercase text-white mb-4">
+                                            Voyages & Séjours Inoubliables
+                                        </h1>
+                                        <p class="mb-4 fs-5">
+                                            Destinations de rêve, circuits organisés, tourisme sur mesure.
+                                        </p>
+                                        <div class="d-flex flex-shrink-0">
+                                            <a class="btn btn-primary rounded-pill text-white py-3 px-5 d-none d-lg-inline-block" href="#">
+                                                Voir les destinations
+                                            </a>
+                                            <a class="btn btn-primary rounded-pill py-3 px-5 d-lg-none"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#ticketModal">
+                                                Réserver maintenant
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
-                                <div class="ticket-form p-5">
-                                    <h2 class="text-dark text-uppercase mb-4">book your ticket</h2>
-                                    <form>
-                                        <div class="row g-4">
-                                            <div class="col-12">
-                                                <input type="text" class="form-control border-0 py-2" id="name" placeholder="Your Name">
-                                            </div>
-                                            <div class="col-12 col-xl-6">
-                                                <input type="email" class="form-control border-0 py-2" id="email" placeholder="Your Email">
-                                            </div>
-                                            <div class="col-12 col-xl-6">
-                                                <input type="phone" class="form-control border-0 py-2" id="phone" placeholder="Phone">
-                                            </div>
-                                            <div class="col-12">
-                                                <select class="form-select border-0 py-2" aria-label="Default select example">
-                                                    <option selected>Select Packages</option>
-                                                    <option value="1">Family Packages</option>
-                                                    <option value="2">Basic Packages</option>
-                                                    <option value="3">Premium Packages</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <input class="form-control border-0 py-2" type="date">
-                                            </div>
-                                            <div class="col-12">
-                                                <input type="number" class="form-control border-0 py-2" id="number" placeholder="Guest">
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="button" class="btn btn-primary w-100 py-2 px-5">Book Now</button>
-                                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-carousel-item">
+                    <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Billet d'avion">
+                    <div class="carousel-caption">
+                        <div class="container py-4">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s">
+                                    <div class="text-start">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">
+                                            Billets d’avion
+                                        </h4>
+                                        <h1 class="display-4 text-uppercase text-white mb-4">
+                                            Voyagez au meilleur prix
+                                        </h1>
+                                        <p class="mb-4 fs-5">
+                                            Réservation rapide, tarifs compétitifs et assistance complète.
+                                        </p>
+                                        <div class="d-flex flex-shrink-0">
+                                            <a class="btn btn-primary rounded-pill text-white py-3 px-5 d-none d-lg-inline-block" href="#">
+                                                Réserver un billet
+                                            </a>
+                                            <a class="btn btn-primary rounded-pill py-3 px-5 d-lg-none"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#ticketModal">
+                                                Réserver maintenant
+                                            </a>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-carousel-item">
+                    <img src="img/carousel-1.jpg" class="img-fluid w-100" alt="Hôtel">
+                    <div class="carousel-caption">
+                        <div class="container py-4">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s">
+                                    <div class="text-start">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">
+                                            Hébergement
+                                        </h4>
+                                        <h1 class="display-4 text-uppercase text-white mb-4">
+                                            Hôtels confort & luxe
+                                        </h1>
+                                        <p class="mb-4 fs-5">
+                                            Réservez des hôtels adaptés à votre budget partout dans le monde.
+                                        </p>
+                                        <div class="d-flex flex-shrink-0">
+                                            <a class="btn btn-primary rounded-pill text-white py-3 px-5 d-none d-lg-inline-block" href="#">
+                                                Réserver un hôtel
+                                            </a>
+                                            <a class="btn btn-primary rounded-pill py-3 px-5 d-lg-none"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#ticketModal">
+                                                Réserver maintenant
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-carousel-item">
+                    <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Visa & Études">
+                    <div class="carousel-caption">
+                        <div class="container align-items-center py-4">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s">
+                                    <div class="text-start">
+                                        <h4 class="text-primary text-uppercase fw-bold mb-4">
+                                            Études à l’étranger
+                                        </h4>
+                                        <h1 class="display-4 text-uppercase text-white mb-4">
+                                            Visa & Campus France
+                                        </h1>
+                                        <p class="mb-4 fs-5">
+                                            Accompagnement complet pour vos démarches académiques et consulaires.
+                                        </p>
+                                        <div class="d-flex flex-shrink-0">
+                                            <a class="btn btn-primary rounded-pill text-white py-3 px-5 d-none d-lg-inline-block" href="#">
+                                                Demander assistance
+                                            </a>
+                                            <a class="btn btn-primary rounded-pill py-3 px-5 d-lg-none"
+                                               data-bs-toggle="modal"
+                                               data-bs-target="#ticketModal">
+                                                Demande mobile
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="header-carousel-item">
-                <img src="img/carousel-2.jpg" class="img-fluid w-100" alt="Image">
-                <div class="carousel-caption">
-                    <div class="container py-4">
-                        <div class="row g-5 align-items-center">
-                            <div class="col-xl-7 fadeInLeft animated" data-animation="fadeInLeft" data-delay="1s" style="animation-delay: 1s;">
-                                <div class="text-start">
-                                    <h4 class="text-primary text-uppercase fw-bold mb-4">Welcome To WaterLand</h4>
-                                    <h1 class="display-4 text-uppercase text-white mb-4">The Greatest Water and Amusement Park</h1>
-                                    <p class="mb-4 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy... 
-                                    </p>
-                                    <div class="d-flex flex-shrink-0">
-                                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Our Packages</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
-                                <div class="ticket-form p-5">
-                                    <h2 class="text-dark text-uppercase mb-4">book your ticket</h2>
-                                    <form>
-                                        <div class="row g-4">
-                                            <div class="col-12">
-                                                <input type="text" class="form-control border-0 py-2" id="name" placeholder="Your Name">
-                                            </div>
-                                            <div class="col-12 col-xl-6">
-                                                <input type="email" class="form-control border-0 py-2" id="email" placeholder="Your Email">
-                                            </div>
-                                            <div class="col-12 col-xl-6">
-                                                <input type="phone" class="form-control border-0 py-2" id="phone" placeholder="Phone">
-                                            </div>
-                                            <div class="col-12">
-                                                <select class="form-select border-0 py-2" aria-label="Default select example">
-                                                    <option selected>Select Packages</option>
-                                                    <option value="1">Family Packages</option>
-                                                    <option value="2">Basic Packages</option>
-                                                    <option value="3">Premium Packages</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-12">
-                                                <input class="form-control border-0 py-2" type="date">
-                                            </div>
-                                            <div class="col-12">
-                                                <input type="number" class="form-control border-0 py-2" id="number" placeholder="Guest">
-                                            </div>
-                                            <div class="col-12">
-                                                <button type="button" class="btn btn-primary w-100 py-2 px-5">Book Now</button>
-                                            </div>
+
+            <!-- FORMULAIRE STATIQUE -->
+            <div class="carousel-caption">
+                <div class="container py-4">
+                    <div class="row g-5 align-items-center justify-content-end">
+                        <div class="col-xl-5 fadeInRight animated" data-animation="fadeInRight" data-delay="1s" style="animation-delay: 1s;">
+                            <div class="ticket-form p-5">
+                                <h2 class="text-dark text-uppercase mb-4">réservez votre billet</h2>
+                                <form>
+                                    <div class="row g-4">
+                                        <div class="col-12">
+                                            <input type="text" class="form-control border-0 py-2" id="name" placeholder="Votre Nom">
                                         </div>
-                                    </form>
-                                </div>
-                            </div>  
+                                        <div class="col-12 col-xl-6">
+                                            <input type="email" class="form-control border-0 py-2" id="email" placeholder="Votre Email">
+                                        </div>
+                                        <div class="col-12 col-xl-6">
+                                            <input type="phone" class="form-control border-0 py-2" id="phone" placeholder="Téléphone">
+                                        </div>
+                                        <div class="col-12">
+                                            <select class="form-select border-0 py-2" aria-label="Default select example">
+                                                <option selected>Sélectionnez un package</option>
+                                                <option value="1">Réservation de vol</option>
+                                                <option value="2">Réservation d'hôtel</option>
+                                                <option value="3">Assistance visa</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <input class="form-control border-0 py-2" type="date">
+                                        </div>
+                                        <div class="col-12">
+                                            <input type="number" class="form-control border-0 py-2" id="number" placeholder="Guest">
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-primary w-100 py-2 px-5">Réservez maintenant</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
         <!-- Carousel End -->
 
-
         <!-- Feature Start -->
-        <div class="container-fluid feature py-5">
+        <!--<div class="container-fluid feature py-5">
             <div class="container py-5">
                 <div class="row g-4">
                     <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
@@ -219,10 +313,13 @@
                             <img src="img/feature-1.jpg" class="img-fluid rounded w-100" alt="Image">
                             <div class="feature-content p-4">
                                 <div class="feature-content-inner">
-                                    <h4 class="text-white">Best Pools</h4>
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro soluta voluptatum laborum mollitia blanditiis suscipit,
+                                    <h4 class="text-white">Accompagnement personnalisé</h4>
+                                    <p class="text-white">
+                                        Nous vous accompagnons étape par étape, de la demande jusqu’à la réalisation complète de votre projet de voyage.
                                     </p>
-                                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+                                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4">
+                                        Nous contacter <i class="fa fa-arrow-right ms-1"></i>
+                                    </a>
                                 </div>
                             </div>
 
@@ -233,10 +330,13 @@
                             <img src="img/feature-2.jpg" class="img-fluid rounded w-100" alt="Image">
                             <div class="feature-content p-4">
                                 <div class="feature-content-inner">
-                                    <h4 class="text-white">Waterslides</h4>
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro soluta voluptatum laborum mollitia blanditiis suscipit,
-                                    </p>
-                                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+                                    <h4 class="text-white">Rapidité & efficacité</h4>
+                                        <p class="text-white">
+                                            Des procédures rapides et bien maîtrisées pour vos réservations, visas, études et voyages touristiques.
+                                        </p>
+                                        <a href="#" class="btn btn-primary rounded-pill py-2 px-4">
+                                            Découvrir nos services <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
                                 </div>
                             </div>
 
@@ -247,15 +347,63 @@
                             <img src="img/feature-3.jpg" class="img-fluid rounded w-100" alt="Image">
                             <div class="feature-content p-4">
                                 <div class="feature-content-inner">
-                                    <h4 class="text-white">River Rides</h4>
-                                    <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis porro soluta voluptatum laborum mollitia blanditiis suscipit,
-                                    </p>
-                                    <a href="#" class="btn btn-primary rounded-pill py-2 px-4">Read More <i class="fa fa-arrow-right ms-1"></i></a>
+                                    <h4 class="text-white">Expertise & fiabilité</h4>
+                                        <p class="text-white">
+                                            Une équipe expérimentée et digne de confiance pour vos démarches de visa, Campus France et tourisme international.
+                                        </p>
+                                        <a href="#" class="btn btn-primary rounded-pill py-2 px-4">
+                                            Pourquoi nous choisir <i class="fa fa-arrow-right ms-1"></i>
+                                        </a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>-->
+        
+        <div class="container-fluid feature premier-feature py-5 position-relative overflow-hidden">
+            <!-- avion animé en fond -->
+            <div class="plane-bg">
+                <i class="fas fa-plane"></i>
+            </div>
+        
+            <div class="container py-5">
+                <div class="row g-4 text-center justify-content-center">
+        
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-item premier-card p-4">
+                            <i class="fas fa-users feature-icon"></i>
+                            <h2 class="counter text-primary fw-bold" data-target="500">0</h2>
+                            <h6 class="text-white">Clients accompagnés</h6>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-item premier-card p-4">
+                            <i class="fas fa-globe-africa feature-icon"></i>
+                            <h2 class="counter text-primary fw-bold" data-target="25">0</h2>
+                            <h6 class="text-white">Pays desservis</h6>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-item premier-card p-4">
+                            <i class="fas fa-passport feature-icon"></i>
+                            <h2 class="counter text-primary fw-bold" data-target="95">0</h2>
+                            <h6 class="text-white">Taux de réussite %</h6>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-item premier-card p-4">
+                            <i class="fas fa-headset feature-icon"></i>
+                            <h2 class="counter text-primary fw-bold" data-target="24">0</h2>
+                            <h6 class="text-white">Support / 7j</h6>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
         </div>
@@ -267,7 +415,7 @@
                 <div class="row g-5">
                     <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.2s">
                         <div>
-                            <h4 class="text-primary">About Waterland</h4>
+                            <h4 class="text-primary">À propos de AGS voyage</h4>
                             <h1 class="display-5 mb-4">The Best Theme & Amusement Park For Your Family</h1>
                             <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis eligendi illum inventore maiores incidunt vero id. Est ipsam, distinctio veritatis earum inventore ab fugit officiis ut ullam, laudantium facere sapiente?
                             </p>
@@ -827,28 +975,36 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-item">
-                            <a href="index.html" class="p-0">
-                                <h4 class="text-white mb-4"><i class="fas fa-swimmer text-primary me-3"></i>WaterLand</h4>
-                                <!-- <img src="img/logo.png" alt="Logo"> -->
+                            <a href="index.html" class="d-inline-block mb-3">
+                                <img src="/img/ags voyage logo.png" alt="AGS Voyage - Agence de voyage au Togo">
                             </a>
-                            <p class="mb-2">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>
+                            <!--<p class="mb-2">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum dolor sit amet, consectetur adipiscing...</p>-->
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">123 Street New York.USA</p>
+                                <p class="text-white mb-0">Agoè légbassito à côté des soeurs canossiennes</p>
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-envelope text-primary me-3"></i>
-                                <p class="text-white mb-0">info@example.com</p>
+                                <a href="mailto:alliancegservice@gmail.com" class="text-white text-decoration-none">
+                                    alliancegservice@gmail.com
+                                </a>
+                            </div>
+                            
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-envelope text-primary me-3"></i>
+                                <a href="mailto:info@agsvoyage.com" class="text-white text-decoration-none">
+                                    contact@agsvoyage.com
+                                </a>
                             </div>
                             <div class="d-flex align-items-center">
                                 <i class="fa fa-phone-alt text-primary me-3"></i>
-                                <p class="text-white mb-0">(+012) 3456 7890</p>
+                                <p class="text-white mb-0">(+228) 93 26 79 36</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-2">
                         <div class="footer-item">
-                            <h4 class="text-white mb-4">Quick Links</h4>
+                            <h4 class="text-white mb-4">Liens rapides</h4>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> About Us</a>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> Feature</a>
                             <a href="#"><i class="fas fa-angle-right me-2"></i> Attractions</a>
@@ -870,23 +1026,23 @@
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-4">
                         <div class="footer-item">
-                            <h4 class="text-white mb-4">Opening Hours</h4>
+                            <h4 class="text-white mb-4">Horaires d'ouverture</h4>
                             <div class="opening-date mb-3 pb-3">
                                 <div class="opening-clock flex-shrink-0">
-                                    <h6 class="text-white mb-0 me-auto">Monday - Friday:</h6>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 11:00 AM - 16:00 PM</p>
+                                    <h6 class="text-white mb-0 me-auto">Lundi - Vendredi:</h6>
+                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 07:30 - 18:30 </p>
                                 </div>
                                 <div class="opening-clock flex-shrink-0">
-                                    <h6 class="text-white mb-0 me-auto">Satur - Sunday:</h6>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 09:00 AM - 17:00 PM</p>
+                                    <h6 class="text-white mb-0 me-auto">Samedi :</h6>
+                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 08:00 - 13:00</p>
                                 </div>
                                 <div class="opening-clock flex-shrink-0">
-                                    <h6 class="text-white mb-0 me-auto">Holiday:</h6>
-                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> 09:00 AM - 17:00 PM</p>
+                                    <h6 class="text-white mb-0 me-auto">Dimanche:</h6>
+                                    <p class="mb-0"><i class="fas fa-clock text-primary me-2"></i> Fermer</p>
                                 </div>
                             </div>
                             <div>
-                                <p class="text-white mb-2">Payment Accepted</p>
+                                <p class="text-white mb-2">Payment Accepté</p>
                                 <img src="img/payment.png" class="img-fluid" alt="Image">
                             </div>
                         </div>
@@ -900,12 +1056,23 @@
         <div class="container-fluid copyright py-4">
             <div class="container">
                 <div class="row g-4 align-items-center">
+                    
+                    <!-- Gauche -->
                     <div class="col-md-6 text-center text-md-start mb-md-0">
-                        <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+                        <span class="text-body text-white">
+                            <i class="fas fa-copyright text-light me-2"></i>
+                            2020 – <span id="year"></span> <strong>AGS Voyage</strong>, Tous droits réservés.
+                        </span>
                     </div>
+        
+                    <!-- Droite -->
                     <div class="col-md-6 text-center text-md-end text-body">
-                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
+                        Conçu par 
+                        <a class="border-bottom text-white" href="https://erexitsarl.com" target="_blank" rel="noopener">
+                            EREXIT Sarl
+                        </a>
                     </div>
+        
                 </div>
             </div>
         </div>
@@ -915,7 +1082,108 @@
         <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
 
-        
+    <div class="modal fade" id="ticketModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down">
+        <div class="modal-content border-0 rounded-4">
+
+            <div class="modal-header">
+                <h5 class="modal-title text-uppercase">réservez votre billet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="ticket-form p-4">
+                    <form>
+                        <div class="row g-4">
+                            
+                            <div class="col-12">
+                                <select class="form-select border-0 py-2" id="service">
+                                    <option value="">Choisissez un service</option>
+                                    <option value="billet">✈️ Réservation de billet</option>
+                                    <option value="hotel">🏨 Réservation d'hôtel</option>
+                                    <option value="visa">🛂 Assistance visa</option>
+                                    <option value="campus">🎓 Procédure Campus France</option>
+                                    <option value="tourisme">🌍 Tourisme</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-12">
+                                <input type="text" class="form-control border-0 py-2" placeholder="Votre Nom">
+                            </div>
+                            
+                            <div class="col-12 col-md-6">
+                                <input type="email" class="form-control border-0 py-2" placeholder="Votre Email">
+                            </div>
+                            
+                            <div class="col-12 col-md-6">
+                                <input type="phone" class="form-control border-0 py-2" placeholder="Téléphone">
+                            </div>
+                            
+                            <!--<div class="col-12">
+                                <select class="form-select border-0 py-2" id="service">
+                                    <option value="">Choisissez un service</option>
+                                    <option value="billet">✈️ Réservation de billet</option>
+                                    <option value="hotel">🏨 Réservation d'hôtel</option>
+                                    <option value="visa">🛂 Assistance visa</option>
+                                    <option value="campus">🎓 Procédure Campus France</option>
+                                    <option value="tourisme">🌍 Tourisme</option>
+                                </select>
+                            </div>-->
+                            
+                            <div class="service-fields d-none" data-service="billet">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Ville de départ">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Ville d’arrivée">
+                                <input class="form-control border-0 py-2 mb-3" type="date">
+                            </div>
+                            
+                            <div class="service-fields d-none" data-service="hotel">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Ville / Pays">
+                                <input class="form-control border-0 py-2 mb-3" type="date">
+                                <input class="form-control border-0 py-2 mb-3" type="date">
+                                <input class="form-control border-0 py-2 mb-3" type="number" placeholder="Nombre de personnes">
+                            </div>
+                            
+                            <div class="service-fields d-none" data-service="visa">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Pays de destination">
+                                <select class="form-select border-0 py-2 mb-3">
+                                    <option>Type de visa</option>
+                                    <option>Touristique</option>
+                                    <option>Études</option>
+                                    <option>Affaires</option>
+                                </select>
+                            </div>
+                            
+                            <div class="service-fields d-none" data-service="campus">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Niveau d'étude">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Pays d'origine">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Pays d'études">
+                            </div>
+                            
+                            <div class="service-fields d-none" data-service="tourisme">
+                                <input class="form-control border-0 py-2 mb-3" placeholder="Destination souhaitée">
+                                <input class="form-control border-0 py-2 mb-3" type="date">
+                                <input class="form-control border-0 py-2 mb-3" type="number" placeholder="Nombre de personnes">
+                            </div>
+
+                            <div class="col-12">
+                                <input class="form-control border-0 py-2" type="date">
+                            </div>
+                            <div class="col-12">
+                                <input type="number" class="form-control border-0 py-2" placeholder="Guest">
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-2">
+                                    Réservez maintenant
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>    
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -929,6 +1197,113 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+document.getElementById('service').addEventListener('change', function () {
+
+    // cacher tous les blocs
+    document.querySelectorAll('.service-fields').forEach(el => {
+        el.classList.add('d-none');
+    });
+
+    // afficher le bon bloc
+    const selected = this.value;
+    if (selected) {
+        const block = document.querySelector('.service-fields[data-service="' + selected + '"]');
+        if (block) block.classList.remove('d-none');
+    }
+});
+</script>
+
+<!-- Spinner - (Chargement) -->
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script>
+window.addEventListener("load", function () {
+    const spinner = document.getElementById("spinner");
+    spinner.classList.add("hide");
+});
+</script>
+
+<script>
+const messages = [
+    "Préparation de votre voyage ✈️",
+    "Recherche des meilleures offres 🌍",
+    "Presque prêt..."
+];
+
+let index = 0;
+setInterval(() => {
+    document.querySelector(".spinner-text").textContent =
+        messages[index++ % messages.length];
+}, 1200);
+</script>
+<!-- Fin - Spinner - (Chargement) -->
+
+<!--<script>
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+
+        const increment = target / 60;
+
+        if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 25);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+</script>-->
+
+<!-- Feature Start -->
+<script>
+const counters = document.querySelectorAll('.counter');
+
+const startCount = (counter) => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
+
+    const step = target / 80;
+
+    const update = () => {
+        count += step;
+
+        if (count < target) {
+            counter.innerText = Math.ceil(count);
+            requestAnimationFrame(update);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    update();
+};
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCount(entry.target);
+            observer.unobserve(entry.target);
+        }
+    });
+});
+
+counters.forEach(counter => observer.observe(counter));
+</script>
+<!-- Feature End -->
     </body>
 
 </html>
